@@ -50,7 +50,7 @@ with ui.sidebar(title="Filter controls"):
 
 with ui.layout_column_wrap(fill=False):
     with ui.value_box(showcase=icon_svg("earlybirds")):
-        "Number of penguins"
+        "Number of  total penguins"
 
         @render.text
         def count():
@@ -73,7 +73,7 @@ with ui.layout_column_wrap(fill=False):
 
 with ui.layout_columns():
     with ui.card(full_screen=True):
-        ui.card_header("Bill length and depth")
+        ui.card_header("Bill: length and depth")
 
         @render.plot
         def length_depth():
