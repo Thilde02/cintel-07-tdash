@@ -1,5 +1,6 @@
+#Imports necessary libraries and dependencies
 import seaborn as sns
-from faicons import icon_svg
+from faicons import icon_svg # provide Icons for display like a penguin figure or a sun 
 
 from shiny import reactive
 from shiny.express import input, render, ui
@@ -77,6 +78,9 @@ with ui.layout_columns():
 
         @render.plot
         def length_depth():
+            # This function creates a scatter plot showing the relationship between bill length 
+  (x-axis) and bill depth (y-axis) colored by penguin species. The data is filtered 
+  based on user selections from the sidebar controls.
             return sns.scatterplot(
                 data=filtered_df(),
                 x="bill_length_mm",
